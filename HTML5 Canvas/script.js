@@ -7,7 +7,6 @@ canvas.height = window.innerHeight
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.globalCompositeOperation = 
 
 let isDrawing = false;
 let lastX = 0;
@@ -22,7 +21,7 @@ function draw (e) {
     ctx.beginPath();
     // start from
     ctx.moveTo(lastX, lastY);
-    // go to 
+    // go to
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
     [lastX, lastY] = [e.offsetX, e.offsetY]; // destructuring an array
